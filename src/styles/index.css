@@ -1,0 +1,103 @@
+body {
+  padding: 1rem;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+td {
+  text-transform: capitalize;
+}
+
+#root {
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+  border-radius: 6px 6px;
+  color: #fefefe;
+  background: #1f2129;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header {
+  padding: 0.5rem 0;
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  color: #18181a;
+  font-weight: bold;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1.5px solid #818698;
+}
+header a {
+  margin: 0 0.5rem;
+  color: #818698;
+  text-decoration: none;
+  position: relative;
+  transition: all 300ms ease;
+}
+header a::before {
+  content: '';
+  width: 100%;
+  height: 10%;
+  bottom: -10px;
+  background: white;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
+}
+header a.active {
+  color: #fefefe;
+  transition: all 300ms ease;
+}
+header a.active::before {
+  bottom: -5px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease;
+}
+header span {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  background: #004de5;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+button {
+  background: #004de5;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+input {
+  background: #0f1115;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 2px;
+}
+input:focus {
+  outline: none;
+}

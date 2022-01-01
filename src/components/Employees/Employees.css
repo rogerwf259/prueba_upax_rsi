@@ -1,0 +1,149 @@
+#employee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem 0.5rem 1rem;
+  border-top: none;
+}
+#employee-container h3 {
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+}
+#employee-container .loader {
+  margin: auto;
+}
+#employee-container .table-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+#employee-container .table-container .search-input {
+  width: 80%;
+  margin-bottom: 0.5rem;
+}
+#employee-container .table-container .search-input label {
+  margin-right: 0.5rem;
+}
+#employee-container .table-container .search-input input {
+  margin: 0 0.2rem;
+  transition: all 300ms ease;
+}
+#employee-container .table-container .search-input input:focus {
+  transform: scale(1.05);
+  transition: all 300ms ease;
+}
+#employee-container .table-container .search-input span {
+  color: #818698;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+#employee-container #custom-table {
+  text-transform: capitalize;
+}
+#employee-container #custom-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #055ffc;
+  color: white;
+  cursor: pointer;
+}
+#employee-container #custom-table td,
+#employee-container #custom-table th {
+  border: 1px solid #818698;
+  padding: 8px;
+}
+#employee-container #custom-table th.active {
+  animation: pulse-blue 2s infinite;
+}
+@keyframes pulse-blue {
+  0% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 #377ffd;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
+  }
+
+  100% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+  }
+}
+#employee-container #custom-table tr:nth-child(even) {
+  background-color: #181a21;
+}
+#employee-container .table-container .page-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+#employee-container .table-container .page-buttons span {
+  margin: 0 0.5rem;
+}
+#employee-container .add-employee-container {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: center;
+}
+#employee-container #add-employee-btn {
+  width: 50%;
+  background: #055ffc;
+  color: #fff;
+  margin-top: 2rem;
+  padding: 0.2rem 0.3rem;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 5;
+  font-weight: normal;
+  transition: all 300ms ease;
+}
+#employee-container #add-employee-btn:hover {
+  transform: scale(1.1);
+  transition: all 300ms ease;
+}
+#employee-container .add-employee-form {
+  margin-top: 1rem;
+  z-index: 4;
+  padding: 0.5rem 1rem;
+  border: 1px solid #818698;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 300ms;
+}
+#employee-container .add-employee-form input {
+  background: #0f1115;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 0.4rem 0.6rem;
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+#employee-container .add-employee-form > * {
+  margin-bottom: 0.5rem;
+}
+#employee-container .add-employee-form label {
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+}
+#employee-container .add-employee-form button {
+  margin-top: 0.5rem;
+}
+#employee-container .add-employee-form.active {
+  height: 250px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease;
+}
