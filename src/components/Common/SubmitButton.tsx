@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactComponentElement } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 interface Props {
   type: 'button' | 'submit' | 'reset';

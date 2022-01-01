@@ -13,7 +13,7 @@ const Employees = () => {
   const employees = useSelector(selectEmployees);
   useEffect(() => {
     if (employees == null) dispatch(getEmployees());
-  }, []);
+  }, [dispatch, employees]);
   return (
     <div id="employee-container">
       <h3>Employee Data</h3>

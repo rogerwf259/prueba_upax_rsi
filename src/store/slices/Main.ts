@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '..';
 import { Employee } from '../../types';
-import { getEmployees, postEmployee } from '../thunks';
+import { getEmployees } from '../thunks';
 
 type AppState = {
   auth: null | { username: string };

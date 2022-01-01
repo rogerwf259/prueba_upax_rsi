@@ -1,4 +1,4 @@
-import { createAsyncThunk, nanoid } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Employee } from '../../types';
 import { toggleLoading } from '../slices/Main';

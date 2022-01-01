@@ -1,5 +1,5 @@
 import { nanoid } from '@reduxjs/toolkit';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 interface Props {
   data: Record<string, any>[];
@@ -72,9 +72,9 @@ const Table = ({ data, pageSize }: Props) => {
         </thead>
         <tbody>{renderTable()}</tbody>
       </table>
-      {search == '' && (
+      {search === '' && (
         <div className="page-buttons">
-          <button disabled={page == 1} onClick={() => setPage(page - 1)}>
+          <button disabled={page === 1} onClick={() => setPage(page - 1)}>
             Prev
           </button>
           <span>{`${page} of ${limit}`}</span>

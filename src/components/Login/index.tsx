@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import {
@@ -55,7 +55,7 @@ const Login: React.FC = () => {
           value={psw}
           onChange={(e) => setPsw(e.target.value)}
         />
-        {error != '' && <span className="form-error">{error}</span>}
+        {error !== '' && <span className="form-error">{error}</span>}
         {loading.includes('login') ? (
           <Loader size="small" />
         ) : (
