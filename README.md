@@ -1,4 +1,4 @@
-# Prueba Upax Rogelio Silva Ibarra
+# Upax React Test Rogelio Silva Ibarra
 
 Usuario para Log In:
 
@@ -7,7 +7,10 @@ Usuario para Log In:
 
 ## Relevant Scripts
 
-After downloading the project to run via local development server on port 3000, use "npm start" or build the project with "npm run build", once its done to run locally use "cd server" and then "npm start", the web app will be available at http://localhost:5000
+After downloading the project run `yarn install` to install the required dependencies.
+
+- To run via local development server on port 3000, use `npm start`
+- To build the project use `npm run build`, once its done to start the application locally use `cd server` and then `npm start`, the web app will be available at http://localhost:5000
 
 ## Deployment
 
