@@ -7,7 +7,7 @@ Usuario para Log In:
 
 ## Relevant Scripts
 
-After downloading the project run `yarn install` to install the required dependencies.
+After downloading the project run `yarn install` on the main folder and on the **server** folder to install the required dependencies.
 
 - To run via local development server on port 3000, use `npm start`
 - To build the project use `npm run build`, once its done to start the application locally use `cd server` and then `npm start`, the web app will be available at http://localhost:5000

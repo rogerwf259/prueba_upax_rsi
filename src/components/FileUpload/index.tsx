@@ -1,4 +1,7 @@
 import React, { PropsWithChildren, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectLoading, toggleLoading } from '../../store/slices/Main';
+import Loader from '../Common/Loader';
 import './FileUpload.css';
 
 interface Props {
@@ -15,6 +18,8 @@ const Upload: React.FC<PropsWithChildren<Props>> = ({
 }) => {
   const fileInputField: React.LegacyRef<HTMLInputElement> = useRef(null);
   const [files, setFiles] = useState<Record<string, any>>({});
+  const dispatch = useDispatch();
+  const loading = useSelector(selectLoading);
   const BytesToKB = (bytes: number) => Math.round(bytes / 1000);
   const addNewFiles = (newFiles: any) => {
     for (let file of newFiles) {
@@ -51,6 +56,12 @@ const Upload: React.FC<PropsWithChildren<Props>> = ({
     e.preventDefault();
     console.log('Files to upload: ', files);
     //Upload logic to your favorite storage
+    dispatch(toggleLoading('uploadFiles'));
+    setTimeout(() => {
+      setFiles({});
+      dispatch(toggleLoading('uploadFiles'));
+      alert('File upload successful');
+    }, 1000);
   };
   return (
     <div id="upload-container">
@@ -67,13 +78,18 @@ const Upload: React.FC<PropsWithChildren<Props>> = ({
           {...rest}
         />
         <button type="button" onClick={handleUploadClick}>
-          Upload file(s)
+          Select file(s)
         </button>
         {Object.keys(files).length > 0 && (
-          <button type="submit" className="upload-button">
+          <button
+            disabled={loading.includes('uploadFiles')}
+            type="submit"
+            className="upload-button"
+          >
             Upload
           </button>
         )}
+        {loading.includes('uploadFiles') && <Loader size="small" />}
       </form>
       <div
         className={`preview-area ${
