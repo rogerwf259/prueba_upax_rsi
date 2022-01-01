@@ -1,8 +1,9 @@
 # Prueba Upax Rogelio Silva Ibarra
 
 Usuario para Log In:
-username: user_prueba
-password: 123456
+
+- username: user_prueba
+- password: 123456
 
 ## Relevant Scripts
 
